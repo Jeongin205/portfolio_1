@@ -30,12 +30,14 @@ public class MainActivity extends AppCompatActivity {
         equal = findViewById(R.id.equal);
         sub = findViewById(R.id.sub);
         mul = findViewById(R.id.mul);
+        back = findViewById(R.id.back);
 
         div.setOnClickListener(mListener);
         add.setOnClickListener(mListener);
         equal.setOnClickListener(mListener);
         sub.setOnClickListener(mListener);
         mul.setOnClickListener(mListener);
+        back.setOnClickListener(mListener);
 
         clear = findViewById(R.id.clear);
         clear.setOnClickListener(new View.OnClickListener() {
@@ -60,18 +62,23 @@ public class MainActivity extends AppCompatActivity {
                     result.setText("");value = SUB; textView.append("-");break;
                 case R.id.mul: number = result.getText().toString();
                     result.setText("");value = MUL; textView.append("×");break;
+                case R.id.back:String del_number = result.getText().toString();
+                     result.setText(del_number.substring(0,del_number.length() - 1));
+                     textView.setText(del_number.substring(0,del_number.length() - 1));
+                     break;
+
                 case R.id.equal:
                     if(value==MUL){
                         result.setText(""+(Double.parseDouble(number)*Double.parseDouble(result.getText().toString())));
+                    }
+                    else if(value==DIV){
+                        result.setText(""+(Double.parseDouble(number)/Double.parseDouble(result.getText().toString())));
                     }
                     else if(value==SUB){
                         result.setText(""+(Double.parseDouble(number)-Double.parseDouble(result.getText().toString())));
                     }
                     else if(value==ADD){
                         result.setText(""+(Double.parseDouble(number)+Double.parseDouble(result.getText().toString())));
-                    }
-                    else if(value==DIV){
-                        result.setText(""+(Double.parseDouble(number)/Double.parseDouble(result.getText().toString())));
                     }
                     textView.setText("");
                     number=result.getText().toString();

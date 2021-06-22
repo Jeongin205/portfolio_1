@@ -23,7 +23,8 @@
         <TextView
             android:id="@+id/result"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
+            android:minHeight="120dp"
             android:gravity="right|bottom"
             android:hint="0"
             android:textSize="60sp"
@@ -43,32 +44,33 @@
             android:orientation="horizontal"
             android:gravity="center">
             <Button
-                android:id="@+id/num1"
+                android:id="@+id/num7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
+                android:text="7"
                 android:onClick="onClick"
                 android:textSize="40sp"
                 android:textColor="@color/white"
                 android:background="@drawable/btn"/>
             <Button
-                android:id="@+id/num2"
+                android:id="@+id/num8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
+                android:text="8"
                 android:onClick="onClick"
                 android:textSize="40sp"
                 android:textColor="@color/white"
                 android:background="@drawable/btn"/>
             <Button
-                android:id="@+id/num3"
+                android:id="@+id/num9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"
+                android:text="9"
                 android:onClick="onClick"
                 android:textSize="40sp"
                 android:textColor="@color/white"
                 android:background="@drawable/btn"/>
+
             <Button
                 android:id="@+id/add"
                 android:layout_width="wrap_content"
@@ -124,33 +126,36 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
+
             <Button
-                android:id="@+id/num7"
+                android:id="@+id/num1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7"
+                android:background="@drawable/btn"
+                android:onClick="onClick"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
                 android:onClick="onClick"
                 android:textSize="40sp"
                 android:textColor="@color/white"
                 android:background="@drawable/btn"/>
             <Button
-                android:id="@+id/num8"
+                android:id="@+id/num3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8"
+                android:text="3"
                 android:onClick="onClick"
                 android:textSize="40sp"
                 android:textColor="@color/white"
                 android:background="@drawable/btn"/>
-            <Button
-                android:id="@+id/num9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9"
-                android:onClick="onClick"
-                android:textSize="40sp"
-                android:textColor="@color/white"
-                android:background="@drawable/btn"/>
+
             <Button
                 android:id="@+id/mul"
                 android:layout_width="wrap_content"
@@ -166,6 +171,14 @@
             android:orientation="horizontal"
             android:gravity="center">
             <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:textSize="40sp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn"/>
+            <Button
                 android:id="@+id/num0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -174,14 +187,7 @@
                 android:textSize="40sp"
                 android:textColor="@color/white"
                 android:background="@drawable/btn"/>
-            <Button
-                android:id="@+id/clear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="C"
-                android:textSize="40sp"
-                android:textColor="@color/white"
-                android:background="@drawable/btn"/>
+
             <Button
                 android:id="@+id/div"
                 android:layout_width="wrap_content"
